@@ -30,3 +30,31 @@ function displayRecipes(recipes) {
     })
     resultsList.innerHTML = html;
 }
+
+const scrollContainer = document.getElementById('scrollContainer');
+const scrollContent = document.getElementById('scrollContent');
+
+function autoScroll() {
+    const scrollWidth = scrollContent.scrollWidth;
+    const containerWidth = scrollContainer.clientWidth;
+    let scrollLeft = 0;
+    let scrollStep = 2; // Amount to scroll each step
+    let scrollingForward = true;
+
+    setInterval(() => {
+        if (scrollingForward) {
+            scrollLeft += scrollStep;
+            if (scrollLeft + containerWidth >= scrollWidth) {
+                scrollingForward = false;
+            }
+        } else {
+            scrollLeft -= scrollStep;
+            if (scrollLeft <= 0) {
+                scrollingForward = true;
+            }
+        }
+        scrollContainer.scrollLeft = scrollLeft;
+    }, 20); // Adjust the interval time as needed for smooth scrolling
+}
+
+autoScroll();

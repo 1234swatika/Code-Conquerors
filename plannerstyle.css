@@ -1,20 +1,33 @@
 body {
     font-family: Arial, sans-serif;
+    background: url('f.svg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
 }
 
 #meal-form {
     width: 50%;
     margin: 40px auto;
+    background-color: #D6D6D6;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
 }
 
 #ingredients {
     width: 100%;
     padding: 10px;
     font-size: 18px;
+    border: 1px solid #747474;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
 #get-meal-btn {
-    background-color: #4CAF50;
+    background-color: #734060;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -23,14 +36,17 @@ body {
 }
 
 #get-meal-btn:hover {
-    background-color: #3e8e41;
+    background-color: #5a324a;
 }
 
 #meal-plan {
     width: 80%;
     margin: 40px auto;
     padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
+    background-color: #D6D6D6;
+    border: 1px solid #747474;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
 }

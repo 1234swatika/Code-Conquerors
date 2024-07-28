@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F5ECEC;
+    background-image: linear-gradient(to right, #F5ECEC, #BC8FAB);
+    /* Add a background image */
+     background-image: url('f.svg'); 
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 350px;
+    width: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 20px 35px rgba(0, 0, 1, 0.9);
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 30px;
+    color: #734060;
+}
+
+p {
+    text-align: center;
+    color: #A6A6A6;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 20px;
+    font-weight: bold;
+    color: #BC8FAB;
+}
+
+input {
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid #A6A6A6;
+    margin-top: 10px;
+    outline: none;
+}
+
+.login-btn {
+    border: none;
+    background-color: #BC8FAB;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.login-btn:hover {
+    background-color: #734060;
+}
+
+.logout-btn {
+    border: none;
+    background-color: #FF4747;
+    color: #fff;
+    height: 50px;
+    width: 100px;
+    font-size: 20px;
+    border-radius: 5px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background-color: #FF3737;
+}

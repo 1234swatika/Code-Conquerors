@@ -7,8 +7,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <script type="module" src="firebaseauth.js"></script>
+    <style>
+        /* Add a background image to the body */
+      
+        
+        /* Add a overlay to the background image */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* adjust the opacity */
+            z-index: -1;
+        }
+    </style>
 </head>
 <body>
+    <div class="overlay"></div>
     <div class="container" id="signup" style="display:none;">
       <h1 class="form-title">Register</h1>
       <form method="post" action="">
@@ -35,13 +51,7 @@
         </div>
        <button class="btn" id="submitSignUp" >Sign Up</button>
       </form>
-      <p class="or">
-        ----------or--------
-      </p>
-      <div class="icons">
-        <i class="fab fa-google"></i>
-        <i class="fab fa-facebook"></i>
-      </div>
+
       <div class="links">
         <p>Already Have Account ?</p>
         <button id="signInButton">Sign In</button>
@@ -68,13 +78,7 @@
           </p>
          <button  class="btn"  id="submitSignIn">Sign In</button>
         </form>
-        <p class="or">
-          ----------or--------
-        </p>
-        <div class="icons">
-          <i class="fab fa-google"></i>
-          <i class="fab fa-facebook"></i>
-        </div>
+  
         <div class="links">
           <p>Don't have account yet?</p>
           <button id="signUpButton">Sign Up</button>

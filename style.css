@@ -9,11 +9,10 @@ body {
     background-color: #F5ECEC;
     background-image: linear-gradient(to right, #F5ECEC, #BC8FAB);
     /* Add a background image */
-     background-image: url('f'); 
+     background-image: url('f.svg'); 
     background-size: cover;
     background-position: center;
 }
-
 .container {
     background: #fff;
     width: 450px;
@@ -21,6 +20,10 @@ body {
     margin: 50px auto;
     border-radius: 10px;
     box-shadow: 0 20px 35px rgba(0, 0, 1, 0.9);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 form {

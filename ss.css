@@ -1,202 +1,183 @@
 body {
-    background-color: #734060;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    margin: 0;
-    padding: 0;
-  }
-  
-  header {
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-  }
-  .topnav {
-    background-color: #F6ECBF; /* New background color for the navbar */
-    overflow: hidden;
-    display: flex;
-    justify-content: flex-end; /* Align items to the right */
-  }
-  
-  /* Style the links inside the navigation bar */
-  .topnav a {
-    color: white; /* Text color for links */
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-  
-  /* Change the color of links on hover */
-  .topnav a:hover {
-    background-color: #7c285d; /* Same background color on hover */
-    color: white;
-  }
-  
-  /* Add a color to the active/current link */
-  .topnav a.active {
-    background-color: #7c285d; /* Same background color for active link */
-    color: white;
-  }
-  h1 {
-    color: #333;
-    font-size: 32px;
-    margin: 0;
-    text-align: center;
-  }
-  
-  form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 40px 0;
-  }
-  
-  input[type="text"] {
-    background-color: #fff;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    font-size: 16px;
-    padding: 12px;
-    width: 300px;
-  }
-  .btn {
-    cursor: pointer;
-  }
-  button[type="submit"] {
-    background-color: #007bff;
-    border: none;
-    border-radius: 8px;
-    color: #fff;
-    cursor: pointer;
-    font-size: 16px;
-    padding: 12px 20px;
-    transition: background-color 0.2s;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #0069d9;
-  }
-  
-  #results {
-    display: grid;
-    gap: 40px;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    margin: 40px 0;
-  }
-  
-  #results > div {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-  }
-  
-  #results img {
-    border-radius: 8px;
-    margin-bottom: 20px;
-    object-fit: cover;
-    height: 200px;
-    width: 100%;
-  }
-  
-  #results h3 {
-    color: #333;
-    font-size: 24px;
-    margin: 0;
-  }
-  
-  #results ul {
-    margin: 0;
-    padding: 0;
-  }
-  
-  #results li {
-    list-style: none;
-    margin-bottom: 10px;
-  }
-  
-  #results a {
-    background-color: #007bff;
-    border-radius: 8px;
-    color: #fff;
-    font-size: 16px;
-    padding: 12px 20px;
-    text-align: center;
-    text-decoration: none;
-    transition: background-color 0.2s;
-  }
-  
-  #results a:hover {
-    background-color: #0069d9;
-  }
-  .topnav img {
-    display: block;
-    margin: 0 auto;
-  }
-  .topnav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .topnav img {
-    margin: 0 auto;
-  }
-  .topnav {
-    text-align: center;
-  }
-  
-  .topnav img {
-    display: inline-block;
-  }
-  .topnav img {
-    margin-right: 50px;
-  }
+  background-color: #734060;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
 
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #734060; /* Set the entire page background color */
-    padding: 0; /* Remove padding to ensure full width */
-    margin: 0; /* Remove default margin */
+.topnav {
+  background-color: #F6ECBF; /* New background color for the navbar */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-right: 20px; /* Add space between logo container and navbar links */
+}
+
+.logo-container .logo {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.nav-links {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-around;
+}
+
+.nav-links a {
+  color: white; /* Text color for links */
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.nav-links a:hover {
+  background-color: #7c285d; /* Same background color on hover */
+  color: white;
+}
+
+/* Add a color to the active/current link */
+.nav-links a.active {
+  background-color: #7c285d; /* Same background color for active link */
+  color: white;
+}
+
+h1 {
+  color: #333;
+  font-size: 32px;
+  margin: 0;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+input[type="text"] {
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  padding: 12px;
+  width: 300px;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 12px 20px;
+  transition: background-color 0.2s;
+}
+
+button[type="submit"]:hover {
+  background-color: #0069d9;
+}
+
+#results {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin: 40px 0;
+}
+
+#results > div {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+#results img {
+  border-radius: 8px;
+  margin-bottom: 20px;
+  object-fit: cover;
+  height: 200px;
+  width: 100%;
+}
+
+#results h3 {
+  color: #333;
+  font-size: 24px;
+  margin: 0;
+}
+
+#results ul {
+  margin: 0;
+  padding: 0;
+}
+
+#results li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+#results a {
+  background-color: #007bff;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+#results a:hover {
+  background-color: #0069d9;
 }
 
 .scroll-container {
-    width: 100%; /* Make the scroll container span the full width of the page */
-    overflow-x: hidden; /* Hide the scrollbar */
-    position: relative;
-    background-color: #734060; /* Set background color behind images */
-    display: flex;
-    justify-content: center; /* Center content horizontally */
-    align-items: center;
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    padding: 20px 0; /* Add vertical padding */
+  width: 100%; /* Make the scroll container span the full width of the page */
+  overflow-x: hidden; /* Hide the scrollbar */
+  position: relative;
+  background-color: #734060; /* Set background color behind images */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  padding: 20px 0; /* Add vertical padding */
 }
 
 .scroll-content {
-    display: flex;
-    white-space: nowrap;
-    transition: transform 0.3s ease; /* Smooth scrolling */
-    background-color: #fff; /* White background for the images */
-    padding: 10px; /* Add padding around images */
-    border-radius: 10px; /* Add border-radius for aesthetics */
+  display: flex;
+  white-space: nowrap;
+  transition: transform 0.3s ease; /* Smooth scrolling */
+  background-color: #fff; /* White background for the images */
+  padding: 10px; /* Add padding around images */
+  border-radius: 10px; /* Add border-radius for aesthetics */
 }
 
 .scroll-content img {
-    width: 250px; /* Increased image width */
-    height: auto;
-    margin: 0 10px;
-    display: inline-block;
+  width: 250px; /* Increased image width */
+  height: auto;
+  margin: 0 10px;
+  display: inline-block;
 }
 
 .scroll-content img:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
 }
-/* Existing CSS code ... */
-
-
-

@@ -8,22 +8,25 @@
     <title>Food Finder</title>
 </head>
 <body>
-    <div class="topnav" >
-        <img src="RecipesforYou.png">
-        <a class="active" href="#home">Home</a>
-        <a href=health.html>Health</a>
-        <a href=planner.html>Planner</a>
-        <a href=tracker.html>Calorie Tracker</a>
-        <a href="index.html">LogIn</a>
-        <a href="logout.html">Logout</a>
-      </div>
-       
-        <form>
-            <input type="text" id="search" placeholder="Enter ingredients">
-            <button type="button" id="submit" class="btn">Search</button>
-        </form>
-        <div id="results"></div>
+    <div class="topnav">
+        <div class="logo-container">
+            <img src="ahaa tamatar.png" class="logo">
+            <img src="RecipesforYou.png" class="logo">
+        </div>
+        <div class="nav-links">
+            <a class="active" href="#home">Home</a>
+            <a href="health.html">Health</a>
+            <a href="planner.html">Planner</a>
+            <a href="tracker.html">Calorie Tracker</a>
+            <a href="index.html">LogIn</a>
+            <a href="logout.html">Logout</a>
+        </div>
     </div>
+    <form>
+        <input type="text" id="search" placeholder="Enter ingredients">
+        <button type="button" id="submit" class="btn">Search</button>
+    </form>
+    <div id="results"></div>
     <div class="scroll-container" id="scrollContainer">
         <div class="scroll-content" id="scrollContent">
             <img src="image1.avif" alt="Tomato">
@@ -33,10 +36,8 @@
             <img src="image 5.jpeg" alt="Kitchen Knife">
             <img src="image6.jpeg" alt="Onion">
             <img src="image7.jpeg">
-            <img src="iamge8.jpeg">
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>

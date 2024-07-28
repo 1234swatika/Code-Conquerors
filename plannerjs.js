@@ -1,43 +1,68 @@
-const getMealBtn = document.getElementById('get-meal-btn');
-const mealForm = document.getElementById('meal-form');
-const mealPlanDiv = document.getElementById('meal-plan');
+const ingredientInput = document.getElementById('ingredientInput');
+const ingredientList = document.getElementById('ingredientList');
+const mealPlansDiv = document.getElementById('mealPlans');
+const themeSelect = document.getElementById('themeSelect');
+const backgroundImageInput = document.getElementById('backgroundImageInput');
+const ingredients = [];
 
-getMealBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    const ingredients = document.getElementById('ingredients').value.trim();
-    if (ingredients) {
-        searchRecipes(ingredients);
+function addIngredient() {
+  const inputValue = ingredientInput.value.trim();
+  if (inputValue) {
+    const [ingredient, quantity] = inputValue.split(' ');
+    ingredients.push({ name: ingredient, quantity: parseInt(quantity) });
+    ingredientInput.value = '';
+    displayIngredients();
+  }
+}
+
+function displayIngredients() {
+  ingredientList.innerHTML = '';
+  ingredients.forEach(ingredient => {
+    const li = document.createElement('li');
+    li.textContent = `${ingredient.name} (${ingredient.quantity})`;
+    ingredientList.appendChild(li);
+  });
+}
+
+function generateMealPlans() {
+  // Simple random meal plan generation (replace with more sophisticated logic)
+  const mealPlans = [];
+  for (let i = 0; i < 7; i++) { // Generate meal plans for 7 days
+    const dailyMeals = [];
+    for (let j = 0; j < 3; j++) { // 3 meals per day
+      const meal = [];
+      for (let k = 0; k < Math.floor(Math.random() * 3) + 2; k++) { // Random number of ingredients per meal
+        meal.push(ingredients[Math.floor(Math.random() * ingredients.length)]);
+      }
+      dailyMeals.push(meal);
     }
+    mealPlans.push(dailyMeals);
+  }
+
+  // Display meal plans
+  mealPlansDiv.innerHTML = '';
+  mealPlans.forEach((dailyMeals, dayIndex) => {
+    const dayDiv = document.createElement('div');
+    dayDiv.textContent = `Day ${dayIndex + 1}`;
+    mealPlansDiv.appendChild(dayDiv);
+    dailyMeals.forEach((meal, mealIndex) => {
+      const mealDiv = document.createElement('div');
+      mealDiv.textContent = `Meal ${mealIndex + 1}: ${meal.map(ingredient => ingredient.name).join(', ')}`;
+      mealPlansDiv.appendChild(mealDiv);
+    });
+  });
+}
+
+themeSelect.addEventListener('change', () => {
+  const themeValue = themeSelect.value;
+  if (themeValue) {
+    document.body.classList.add(`theme-${themeValue}`);
+  } else {
+    document.body.classList.remove('theme-734060', 'theme-747474');
+  }
 });
 
-async function searchRecipes(ingredients) {
-    const ingredientArray = ingredients.split(',').map(ingredient => ingredient.trim());
-    const queryString = ingredientArray.join(',');
-    
-    const response = await fetch(`https://api.edamam.com/search?q=${queryString}&app_id=3ea0f6fb&app_key=eca675591af3216b533aa40b60e94e4e	Y&from=0&to=21`);
-    const data = await response.json();
-    if (data.hits && data.hits.length > 0) {
-        displayMealPlan(data.hits);
-    } else {
-        mealPlanDiv.innerHTML = '<p>No recipes found. Please try different ingredients.</p>';
-    }
-}
-
-function displayMealPlan(recipes) {
-    let mealPlanHtml = '';
-    recipes.slice(0, 7).forEach((recipeData, index) => {
-        const recipe = recipeData.recipe;
-        const ingredients = recipe.ingredientLines.map(ingredient => `<li>${ingredient}</li>`).join('');
-        mealPlanHtml += `
-            <div>
-                <h2>Day ${index + 1}: ${recipe.label}</h2>
-                <img src="${recipe.image}" alt="${recipe.label}">
-                <h3>Ingredients:</h3>
-                <ul>${ingredients}</ul>
-                <h3>Instructions:</h3>
-                <p><a href="${recipe.url}" target="_blank">View Recipe</a></p>
-            </div>
-        `;
-    });
-    mealPlanDiv.innerHTML = mealPlanHtml;
-}
+backgroundImageInput.addEventListener('change', () => {
+  const backgroundImageURL = URL.createObjectURL(backgroundImageInput.files[0]);
+  document.body.style.backgroundImage = `url(${backgroundImageURL})`;
+});

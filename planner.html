@@ -1,20 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meal Plan Generator</title>
-    <link rel="stylesheet" href="plannerstyle.css">
+  <title>Meal Planner</title>
+  <style>
+    /* Basic styling */
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #D6D6D6; /* Background color */
+      background-image: url('f.svg'); 
+    }
+    header {
+      background-color: #734060; /* Header background color */
+      color: #FFFFFF; /* Header text color */
+      padding: 20px;
+      text-align: center;
+    }
+    #ingredients {
+      margin-bottom: 10px;
+    }
+    #mealPlans {
+      margin-top: 20px;
+    }
+    .theme-734060 {
+      color: #734060; /* Text color */
+    }
+    .theme-747474 {
+      color: #747474; /* Text color */
+    }
+  </style>
 </head>
 <body>
-    <h1>Meal Plan Generator</h1>
-    <form id="meal-form">
-        <label for="ingredients">Enter ingredients (separated by commas):</label>
-        <input type="text" id="ingredients" name="ingredients">
-        <button id="get-meal-btn">Get Meal Plan</button>
-    </form>
-    <div id="meal-plan"></div>
-
-    <script src="plannerjs.js"></script>
+  <header>
+    <h1>Meal Planner</h1>
+  </header>
+  <input type="text" id="ingredientInput" placeholder="Enter ingredient (e.g., chicken 4)">
+  <button onclick="addIngredient()">Add</button>
+  <button onclick="generateMealPlans()">Generate Meal Plans</button>
+  <ul id="ingredientList"></ul>
+  <div id="mealPlans"></div>
+  
+  
+  <script src="plannerjs.js"></script>
 </body>
 </html>

@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#meal-form {
+    width: 50%;
+    margin: 40px auto;
+}
+
+#ingredients {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+}
+
+#get-meal-btn {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#get-meal-btn:hover {
+    background-color: #3e8e41;
+}
+
+#meal-plan {
+    width: 80%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
